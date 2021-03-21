@@ -1,0 +1,404 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+    font-family: "josefin sans", sans-serif;
+    overflow-x: hidden;
+}
+
+li:before {
+	content: "*";
+	color: crimson;
+	margin-right: 0.3em;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section__title {
+	font-size: 3em;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: #222;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: crimson;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.company-name {
+    font-size: 1.5em;
+    font-family: roboto;
+    margin-left: 0.5em;
+    color: white;
+}
+
+#nav-bar {
+    margin-left: auto;
+	transition: all 0.3s;
+	height: auto;
+}
+
+.nav-link {
+    padding: 0.8em;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.3s;
+    border-radius: 0.5em;
+    margin: 0.2em;
+}
+
+.nav-link:hover {
+    background-color: crimson;
+}
+
+.menu-button {
+	font-size: 3em;
+	color: white;
+	padding: 0;
+	display: none;
+}
+
+.close-icon {
+	font-size: 2em;
+	color: white;
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#portada {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0 , 0, 0 , 0.6), rgba( 0, 0, 3, 0.6)), url("https://fakeguitars.webcindario.com/images/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+	background-attachment: fixed;
+    display: flex;
+	overflow: hidden;
+}
+
+.portada__title {
+    font-size: 5vw;
+    color: white;
+	overflow: hidden;
+	margin: auto auto;
+	text-align: center;
+}
+
+.portada-box__form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada-box__field {
+    padding: 0.5em;
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+.portada-box__submit {
+    padding: 1em;
+    background-color: crimson;
+    border-radius: 0.5em;
+    color: white;
+    border: none;
+    transition: all 0.3s;
+}
+
+.portada-box__submit:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.best-quality {
+    text-align: center;
+    padding: 1em;
+    background-color: white;
+}
+
+.card-q {
+    margin: 10px;
+    box-shadow: 0 0 10px 1px lightgray;
+    background-color: whitesmoke;
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-q__thumbnail i {
+    color: crimson;
+    font-size: 3em;
+}
+
+.card-q__title, .card-q__text,.card-q__thumbnail {
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+.card-q__title {
+    color: #222;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-q__text {
+    color: gray;
+}
+
+.guitarrist {
+    background-color: orangered;
+    padding: 2em;
+    color: whitesmoke;
+}
+
+.guitarrist iframe {
+    margin: 1em auto;
+    display: block;
+    width: 60%;
+    height: 400px;
+}
+
+.guitar-types {
+    background-color: snow;
+    padding: 2em;
+}
+
+.guitar-types .container {
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.card-g {
+    margin: 10px;
+    border: 1px solid lightgray;
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+    color: #222;
+	background-image: linear-gradient(to right, white 50%, mistyrose 50%);
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.card-g:hover {
+	/* transform: scale(1.1); */
+	box-shadow: 0 0 20px lightgray;
+}
+
+.card-g:hover > .card-g__price {
+	transform: scale(1.2);
+}
+
+.card-g__image {
+	padding: 2em 0.5em;
+}
+
+.card-g__image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-g__title {
+    font-size: 2.5em;
+    color: white;
+    background-color: crimson;
+	text-align: center;
+}
+
+.card-g__price{
+    padding: 0.5em;
+	font-size: 1.5em;
+    text-decoration: none;
+    background-color: crimson;
+    color: white;
+    transition: all 0.3s;
+    align-self: flex-end;
+    margin: 1em;
+    margin-top: auto;
+	transition: 0.5s;
+}
+
+.card-g__list {
+	padding: 0 1em;
+	list-style-type: none;
+	margin: 1em 0;
+}
+
+.card-g__list-item {
+	margin-top: 0.5em;
+}
+
+.card-g__list-item:first-child {
+	margin-top: 0;
+}
+
+#contact .container {
+	width: 100%;
+}
+
+.location, .form {
+	width: 50%;
+	padding: 1em;
+}
+
+.location__map {
+    display: block;
+    width: 100%;
+    height: 90%;
+}
+
+.location__title, .form__title {
+	font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form__field {
+	display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.form__label {
+    font-size: 1.4em;
+    color: black;
+    font-weight: bold;
+}
+
+.form__input {
+    margin-top: 0.3em;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding: 1em;
+}
+
+.form__input:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+
+.form__submit {
+    display: block;
+    margin-top: 1em;
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 1em;
+    font-size: 1.3em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+#footer {
+    padding: 2em;
+    text-align: center;
+    color: white;
+    background-color: #222;
+}
+
+@media all and (max-width: 900px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        width: 100%;
+    }
+	
+	.menu-button {
+		display: initial;
+		margin-left: auto;
+		cursor: pointer;
+	}
+	
+	.close-icon {
+		display: initial;
+		cursor: pointer;
+	}
+
+    #nav-bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #222;
+		overflow: hidden;
+		font-size: 2em;
+	}
+	
+}
+
+@media (max-width: 700px) {
+	.portada__title {
+		font-size: 5em;
+	}
+	
+	.section__title {
+		font-size: 2em;
+	}
+}
+
+@media all and (max-width: 650px) {
+
+
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .location, .form {
+        width: 100%;
+    }
+
+
+    .card-q {
+        flex-basis: auto;
+    }
+
+    #video {
+        width: 100%;
+    }
+
+}
+
